@@ -1,0 +1,256 @@
+ul{
+    list-style:none;
+    padding-left:0;
+}
+
+#sidebar{
+    width:35px;
+    background-color:#e1e1e1;
+    padding-top:200px;
+    position:fixed;
+    min-height:100%;
+    z-index:100;
+}
+
+.item{
+    margin-top:5px;
+    font-size:12px;
+    font-family:'Microsoft YaHei';
+    text-align:center;
+    cursor:pointer;
+}
+
+#closeBar{
+    position:absolute;
+    bottom:30px;
+    width:35px;
+    text-align:center;
+    cursor:pointer;
+}
+
+.nav-content{
+    width:200px;
+    position:fixed;
+    min-height:100%;
+    background-color:#e1e1e1;
+    /*border:1px solid #000;*/
+    z-index:99;
+    opacity:0;
+}
+
+.nav-con-close{
+    position:absolute;
+    top:5px;
+    right:5px;
+    cursor:pointer;
+}
+/*sidebar关闭动画*/
+.sidebar-move-left{
+    -webkit-animation:smf 1s;
+    animation:smf 1s;
+    -webkit-animation-fill-mode:forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes  smf{
+    0%{
+    }
+    100%{
+        -webkit-transform:translateX(-120px);
+        transform:translateX(-120px);
+    }
+}
+
+@keyframes smf{
+     0%{
+     }
+     100%{
+         -webkit-transform:translateX(-120px);
+         transform:translateX(-120px);
+     }
+ }
+
+.closeBar-move-right{
+    -webkit-animation:cmr 1s;
+    animation:cmr 1s;
+    -webkit-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+}
+
+@-webkit-keyframes cmr {
+    0%{
+    }
+    100%{
+        -webkit-transform:translateX(160px) rotate(405deg) scale(1.5);
+        transform:translateX(160px) rotate(405deg) scale(1.5);
+    }
+}
+
+@keyframes cmr{
+    0%{
+    }
+    100%{
+        -webkit-transform:translateX(160px) rotate(405deg) scale(1.5);
+        transform:translateX(160px) rotate(405deg) scale(1.5);
+    }
+}
+/*sidebar显示动画*/
+.sidebar-move-right{
+    -webkit-animation:smr 1s;
+    animation:smr 1s;
+    -webkit-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+}
+
+@-webkit-keyframes smr{
+    0%{
+        -webkit-transform:translateX(-120px);
+        transform:translateX(-120px);
+    }
+    100%{
+        -webkit-transform:translateX(0px);
+        transform:translateX(0px);
+    }
+}
+
+@keyframes smr{
+    0%{
+        -webkit-transform:translateX(-120px);
+        transform:translateX(-120px);
+    }
+    100%{
+        -webkit-transform:translateX(0px);
+        transform:translateX(0px);
+    }
+}
+
+.closeBar-move-left{
+    -webkit-animation:cml 1s;
+    animation:cml 1s;
+    -webkit-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+}
+
+@-webkit-keyframes cml{
+    0%{
+        -webkit-transform:translateX(160px) rotate(405deg) scale(1.5);
+        transform:translateX(160px) rotate(405deg) scale(1.5);
+    }
+    100%{
+        -webkit-transform:translateX(0px) rotate(0deg) scale(1);
+        transform:translateX(0px) rotate(0deg) scale(1);
+    }
+}
+
+@keyframes cml{
+    0%{
+        -webkit-transform:translateX(160px) rotate(405deg) scale(1.5);
+        transform:translateX(160px) rotate(405deg) scale(1.5);
+    }
+    100%{
+        -webkit-transform:translateX(0px) rotate(0deg) scale(1);
+        transform:translateX(0px) rotate(0deg) scale(1);
+    }
+}
+/*nav-content显示动画*/
+.menuContent-move-right{
+    top:0;
+    -webkit-animation:mmr .5s;
+    animation:mmr .5s;
+    -webkit-animation-fill-mode:forwards;
+    animation-fill-mode:forwards;
+}
+
+@-webkit-keyframes mmr {
+    0%{
+        opacity:0;
+        -webkit-transform:translateX(-85px);
+        transform:translateX(-85px);
+    }
+    100%{
+        opacity:1;
+        -webkit-transform:translateX(35px);
+        transform:translateX(35px);
+    }
+}
+
+@keyframes mmr {
+    0%{
+        opacity:0;
+        -webkit-transform:translateX(-85px);
+        transform:translateX(-85px);
+    }
+    100%{
+        opacity:1;
+        -webkit-transform:translateX(35px);
+        transform:translateX(35px);
+    }
+}
+/*nav-content关闭动画*/
+.menuContent-move-left{
+    top:0;
+    -webkit-animation:mml 1s;
+    animation:mml 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes mml {
+    0%{
+        opacity:1;
+        -webkit-transform:translateX(35px);
+        transform:translateX(35px);
+    }
+    100%{
+        opacity:0;
+        -webkit-transform:translateX(-85px);
+        transform:translateX(-85px);
+    }
+}
+
+@keyframes mml {
+    0%{
+        opacity:1;
+        -webkit-transform:translateX(35px);
+        transform:translateX(35px);
+    }
+    100%{
+        opacity:0;
+        -webkit-transform:translateX(-85px);
+        transform:translateX(-85px);
+    }
+}
+/*nav-content切换动画*/
+.menuContent-move-up{
+    left:35px;
+    -webkit-animation:mmu 1s;
+    animation:mmu 1s;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes mmu {
+    0%{
+        opacity:0;
+        -webkit-transform: translateY(250px);
+        transform:translateY(250px);
+    }
+    100%{
+        opacity:1;
+        -webkit-transform:translateY(0px);
+        transform:translateY(0px);
+    }
+}
+
+@keyframes mmu{
+    0%{
+        opacity:0;
+        -webkit-transform: translateY(250px);
+        transform:translateY(250px);
+    }
+    100%{
+        opacity:1;
+        -webkit-transform:translateY(0px);
+        transform:translateY(0px);
+    }
+}
